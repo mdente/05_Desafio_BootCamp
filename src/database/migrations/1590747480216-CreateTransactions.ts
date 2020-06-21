@@ -12,15 +12,11 @@ export default class CreateTransactions1590747480216
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',
             type: 'varchar',
-            isNullable: false,
-          },
-          {
-            name: 'value',
-            type: 'float',
             isNullable: false,
           },
           {
@@ -29,10 +25,12 @@ export default class CreateTransactions1590747480216
             isNullable: false,
           },
           {
-            name: 'category_id',
-            type: 'varchar',
-            isNullable: false,
+            name: 'value',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
           },
+
           {
             name: 'created_at',
             type: 'timestamp',

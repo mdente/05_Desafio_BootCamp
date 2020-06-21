@@ -12,6 +12,7 @@ export default class CreateCategories1592354152024
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',
